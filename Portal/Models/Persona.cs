@@ -15,6 +15,8 @@ namespace Portal.Models
 
         public string Materno { get; set; }
 
+        public string Password { get; set; }
+
         public override string ToString()
         {
             return $"{Nombre} {Paterno} {Materno}";
