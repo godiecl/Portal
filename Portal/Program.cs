@@ -36,6 +36,7 @@ namespace Portal
 
                     // Ingreso de informacion via repositorio
                     repository.Add(new Models.Persona {
+                        RUT = "130144918",
                         Nombre = "Diego",
                         Paterno = "Urrutia",
                         Materno = "Astorga",
