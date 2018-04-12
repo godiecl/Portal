@@ -30,7 +30,7 @@ namespace Portal.Pages.Persona
         public async Task OnGetAsync()
         {
             Personas = _personaRepository.List()
-                .Select(p => new PersonaViewModel { Nombre = p.Nombre + p.Paterno + p.Materno }).ToList();
+                .Select(p => new PersonaViewModel { Nombre = p.ToString() }).ToList();
         }
     }
 }
