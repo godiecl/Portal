@@ -16,6 +16,7 @@ namespace Portal.Data
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
+            // Configuracion de base de datos, puede estar en Startup.cs
             // optionsBuilder.UseInMemoryDatabase("db");
             // optionsBuilder.UseSqlServer(@"Server=(localdb)\mssqllocaldb;Database=BaseDatosPersonas;Trusted_Connection=True;");
         }
