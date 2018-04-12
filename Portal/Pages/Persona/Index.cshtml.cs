@@ -13,24 +13,25 @@ namespace Portal.Pages.Persona
 {
     public class IndexModel : PageModel
     {
+        /// <summary>
+        /// Conexion con el respositorio de codigo.
+        /// </summary>
         private readonly IRepository<Models.Persona> _personaRepository;
 
+        /// <summary>
+        /// Construccion de la pagina de inicio
+        /// </summary>
+        /// <param name="personaRepositorio">Repositorio de Personas</param>
         public IndexModel(IRepository<Models.Persona> personaRepositorio)
         {
             _personaRepository = personaRepositorio;
         }
 
-        public List<PersonaViewModel> Personas { get; set; } = new List<PersonaViewModel>();
+        public List<Models.Persona> Personas { get; set; }
 
-        public class PersonaViewModel
+        public async void OnGetAsync()
         {
-            public string Nombre { get; set; }
-        }
-
-        public async Task OnGetAsync()
-        {
-            Personas = _personaRepository.List()
-                .Select(p => new PersonaViewModel { Nombre = p.ToString() }).ToList();
+            Personas = await _personaRepository.Find().ToListAsync();
         }
     }
 }

@@ -29,7 +29,7 @@ namespace Portal
                     // Respositorio de Personas
                     IRepository<Models.Persona> repository = services.GetRequiredService<IRepository<Models.Persona>>();
 
-                    if (repository.List().Any())
+                    if (repository.Find().ToList().Any())
                     {
                         return;
                     }

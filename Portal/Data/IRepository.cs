@@ -14,7 +14,7 @@ namespace Portal.DAO
     {
         T GetById(int id);
 
-        List<T> List();
+        IQueryable<T> Find();
 
         T Add(T entity);
 

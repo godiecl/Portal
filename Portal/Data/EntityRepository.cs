@@ -22,9 +22,9 @@ namespace Portal.Data
             return _dbContext.Find<T>(id);
         }
 
-        public List<T> List()
+        public IQueryable<T> Find()
         {
-            return _dbContext.Set<T>().ToList();
+            return _dbContext.Set<T>();
         }
 
         public T Add(T entity)
