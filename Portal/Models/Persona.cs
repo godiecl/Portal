@@ -10,7 +10,7 @@ namespace Portal.Models
     public class Persona : BaseEntity
     {
         [DisplayName("R.U.T.")]
-        [DisplayFormat(ApplyFormatInEditMode = true, DataFormatString = "{0:N}")]
+        [Required(ErrorMessage = "Se debe ingresar el RUT")]
         public string RUT { get; set; }
 
         [Required(ErrorMessage = "Se requiere el nombre")]
@@ -18,17 +18,14 @@ namespace Portal.Models
         public string Nombre { get; set; }
 
         [Required(ErrorMessage = "Se requiere el apellido paterno")]
-        [StringLength(80)]
+        [StringLength(80, ErrorMessage = "Tamanio maximo 80")]
         public string Paterno { get; set; }
 
+        [StringLength(40)]
         public string Materno { get; set; }
 
         [DataType(DataType.Password)]
         public string Password { get; set; }
 
-        public override string ToString()
-        {
-            return $"{Nombre} {Paterno} {Materno}";
-        }
     }
 }
