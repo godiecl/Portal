@@ -33,6 +33,7 @@ namespace Portal
 
             // Servicio de repositorio de Persona
             services.AddScoped<IRepository<Persona>, EntityRepository<Persona>>();
+            services.AddScoped<IRepository<Vehiculo>, EntityRepository<Vehiculo>>();
 
             // services.AddScoped<IRepository<Clase>, EntityRepository<Clase>>();
         }
