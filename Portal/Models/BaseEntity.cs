@@ -12,7 +12,7 @@ namespace Portal.Models
         /// Llave primaria de la entidad
         /// </summary>
         [ScaffoldColumn(false)]
-        public int ID { get; set; }
+        public int Id { get; set; }
 
     }
 }
