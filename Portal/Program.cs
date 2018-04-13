@@ -24,6 +24,7 @@ namespace Portal
                 // Proveedor de los servicios
                 IServiceProvider services = scope.ServiceProvider;
 
+                //*
                 try
                 {
                     // Respositorio de Personas
@@ -36,10 +37,11 @@ namespace Portal
 
                     // Ingreso de informacion via repositorio
                     repository.Add(new Models.Persona {
-                        RUT = "130144918",
+                        Rut = "130144918",
                         Nombre = "Diego",
                         Paterno = "Urrutia",
                         Materno = "Astorga",
+                        Email = "durrutia@ucn.cl",
                         Password = "durrutia123"
                     });
 
@@ -49,6 +51,7 @@ namespace Portal
                     var logger = services.GetRequiredService<ILogger<Program>>();
                     logger.LogError(ex, "Se produjo un error seteando la base de datos");
                 }
+                //*/
             }
 
             host.Run();
