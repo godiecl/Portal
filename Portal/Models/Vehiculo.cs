@@ -20,5 +20,8 @@ namespace Portal.Models
         [DisplayFormat(DataFormatString = "{0:yyyy-MM-dd}", ApplyFormatInEditMode = true)]
         public DateTime Fecha { set; get; }
 
+        // Asociacion con Persona
+        public int PersonaId { get; set; }
+        public Persona Persona { get; set; }
     }
 }
