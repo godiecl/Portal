@@ -23,7 +23,7 @@ namespace Portal.Data
 
         public DbSet<Persona> Personas { get; set; }
 
-        public DbSet<Portal.Models.Vehiculo> Vehiculo { get; set; }
+        public DbSet<Vehiculo> Vehiculo { get; set; }
 
     }
 }
