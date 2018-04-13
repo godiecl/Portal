@@ -9,7 +9,7 @@ using Portal.DAO;
 using Portal.Data;
 using Portal.Models;
 
-namespace Portal.Pages.Persona
+namespace Portal.Pages.Repository
 {
     public class IndexModel : PageModel
     {
@@ -27,7 +27,7 @@ namespace Portal.Pages.Persona
             _personaRepository = personaRepositorio;
         }
 
-        public List<Models.Persona> Personas { get; set; }
+        public List<Persona> Personas { get; set; }
 
         public async void OnGetAsync()
         {
