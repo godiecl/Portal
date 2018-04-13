@@ -27,8 +27,8 @@ namespace Portal
         {
             // Utilizacion de base de datos en memoria (no persistente)
             services.AddDbContext<ApplicationDbContext>(
-                // options => options.UseInMemoryDatabase("db"));
-                options => options.UseSqlServer(Configuration.GetConnectionString("ApplicationDbContext")));
+                options => options.UseInMemoryDatabase("db"));
+                // options => options.UseSqlServer(Configuration.GetConnectionString("ApplicationDbContext")));
 
             services.AddMvc();
 
