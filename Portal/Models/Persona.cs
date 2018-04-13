@@ -11,7 +11,7 @@ namespace Portal.Models
     {
         [DisplayName("R.U.T.")]
         [Required(ErrorMessage = "Se debe ingresar el RUT")]
-        public string RUT { get; set; }
+        public string Rut { get; set; }
 
         [Required(ErrorMessage = "Se requiere el nombre")]
         [StringLength(40)]
@@ -24,8 +24,14 @@ namespace Portal.Models
         [StringLength(40)]
         public string Materno { get; set; }
 
+        [StringLength(100)]
+        public string Email { get; set; }
+
         [DataType(DataType.Password)]
         public string Password { get; set; }
+
+        // Asociacion con los Vehiculos
+        public ICollection<Vehiculo> Vehiculos { get; set; }
 
         public override string ToString()
         {
