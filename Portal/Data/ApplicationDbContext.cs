@@ -9,6 +9,7 @@ namespace Portal.Data
 {
     public class ApplicationDbContext : DbContext
     {
+
         public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options) : base(options)
         {
 
@@ -21,8 +22,15 @@ namespace Portal.Data
             // optionsBuilder.UseSqlServer(@"Server=(localdb)\mssqllocaldb;Database=BaseDatosPersonas;Trusted_Connection=True;");
         }
 
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        {
+            // Configuration del modelo
+        }
+
+        // Vista de base de datos de Persona
         public DbSet<Persona> Personas { get; set; }
 
+        // Vista de base de datos de Vehiculo
         public DbSet<Vehiculo> Vehiculo { get; set; }
 
     }
